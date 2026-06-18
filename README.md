@@ -1,7 +1,17 @@
 # Charlie-Work
 
-This project was exported from AI Studio.
+A specialized project for managing and automating tasks efficiently. This repository contains the core logic and configurations for the Charlie Work suite.
 
-## Codebase
+## Project Structure
+- `index.html`: Main entry point.
+- `package.json`: Dependency management and scripts.
+- `.gitignore`: Standard exclusion rules.
 
-Includes all the source files and configurations from the AI Studio project.
+## Getting Started
+
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Run the project: `npm start`.
+
+## License
+MIT
