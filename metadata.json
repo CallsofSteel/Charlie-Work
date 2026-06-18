@@ -1,0 +1,8 @@
+{
+  "name": "Charlie Work AI",
+  "description": "The unglamorous AI agent that handles your 'dirty work'-disputes, refunds, and paperwork.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
