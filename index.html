@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charlie Work AI</title>
+    <script>
+      // Fix for "cannot set property fetch of #[window] which has only a getter"
+      // This happens when polyfills (like whatwg-fetch) try to overwrite the native fetch.
+      (function() {
+        var _fetch = window.fetch;
+        try {
+          Object.defineProperty(window, 'fetch', {
+            enumerable: true,
+            configurable: true,
+            get: function() { return _fetch; },
+            set: function() { console.warn('Something tried to overwrite window.fetch - ignored.'); }
+          });
+        } catch (e) {
+          console.error('Failed to patch fetch:', e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
